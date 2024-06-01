@@ -9,20 +9,27 @@ function heapSort(arr){
     }
     return arr;
 }
+
+
 function heapify(arr,n,i){
+
     let largest=i;
     let left=i*2+1;
     let right=i*2+2;
+
     if(left<n && arr[left]>arr[largest]){
         largest=left;
     }
+    
     if(right<n && arr[right]>arr[largest]){
         largest=right;
     }
+
     if(largest!=i){
         [arr[largest],arr[i]]=[arr[i],arr[largest]];
         heapify(arr,n,largest);
     }
+    
 }
 const arr=[30,7,20,9,15];
 console.log(heapSort(arr))
