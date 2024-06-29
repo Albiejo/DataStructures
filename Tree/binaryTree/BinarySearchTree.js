@@ -67,7 +67,7 @@ class BST{
     }
     deleteNode(root,val){
         if(!root){
-            return root;
+            return false;
         }
         if(val<root.value){
             root.left=this.deleteNode(root.left,val);
